@@ -53,6 +53,7 @@ function clickCell(column,colpick) {
         // event that fill the specific cell 
         colpick.addEventListener('click' , function(){
             column[i].style.background = color[activePlayer];
+            column[i].classList.add('animated', 'bounceInDown');
             winner(column);
             switchPlayer();
             i--;
