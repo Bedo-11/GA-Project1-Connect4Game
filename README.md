@@ -85,12 +85,16 @@ Your Connect 4 app must:
 
 ## README Suggestions
 
-- List technologies used
-- Link to wireframes and user stories.
-- Document your planning and tell a story about your development process and problem-solving strategy.
-- List unsolved problems which would be fixed in future iterations.
-- Describe how you solved for the winner
-- Describe how some of your favorite functions work
+List tech used
+Dom , array , for loop , if statement , functions , addeventListner
+First of all i create html file , css file , javascript file , and i start to create the markup for the page so i create div container for the game boerd and inside the container i create 4 colmuns divs inside each of them i create 4 divs for cells so i can keep track on them , after that i give each elemnt a class or id so i can manipulate them in javascript , after that i add some css to the page for good styling , in the end i start with javascript to build the logic of the game , i start DOM each elemnt i need and store them in variables to make it easy to use them in all code , after that i create initlize function to start the game if one of the columns was clicked , after that i create function for the click event and hover event on cells ,and create function for switch between the players to use it after each click in game , and finally i create function for check if there is a winner or tie , also i create function for dialog box to show if game is over!
+The winner function has 4 function inside of it:
+Column winner check
+The function recive specific column as paramter and check if all cells of the column has the same color then show the winner
+Row winner check
+It has for loop to  itrate over each row and when it found row that all its cells has the same color then show the winner
+Cross winner check
+Has to possiable statement so i use if here and if one of them is success then show the winner
 
 ## Necessary Deliverables
 * Projects are due Thursday, 5/12/2019 at 8:30am!
