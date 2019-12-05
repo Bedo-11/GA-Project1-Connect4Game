@@ -98,6 +98,15 @@ function rowCheck(){
         } 
     }
     cross();
+
+    function tie() {
+        if (!(columns1[0].style.background == '#fff') && !(columns2[0].style.background == '#fff') &&
+            !(columns3[0].style.background == '#fff') && !(columns4[0].style.background == '#fff') ){
+                console.log('tie!');
+            }
+            
+    }
+    tie();
 }
 
 function ShowDialog() {
