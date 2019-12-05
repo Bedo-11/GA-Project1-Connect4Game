@@ -20,10 +20,9 @@ player1Color = 'red';
 player2Color = 'yellow';
 color = [player1Color,player2Color];
 let playerZoneColor = document.querySelector('.playerZone');
-
 // activePlayer variable
 let activePlayer = 0;
-
+let counter =0;
 function intilizeGame() {
     if(col1pick) {
         clickCell(columns1,col1pick);
@@ -39,7 +38,6 @@ function intilizeGame() {
     } 
 }
 intilizeGame();
-
 function clickCell(column,colpick) {
     for(let i = column.length-1; i>=0;i--){
         // hover color for column  
@@ -57,6 +55,7 @@ function clickCell(column,colpick) {
             winner(column);
             switchPlayer();
             i--;
+            counter++
         });
         break;
     }}
@@ -76,7 +75,6 @@ function winner(columnN) {
         }
     }
     colCheck(columnN);
-   
 function rowCheck(){
     for(let i=3;i>=0;i--){
         if (columns1[i].style.background == color[activePlayer] && columns2[i].style.background == color[activePlayer] &&
@@ -86,7 +84,6 @@ function rowCheck(){
             }
     }
    rowCheck();
-
     function cross() {
         if (columns1[3].style.background == color[activePlayer] && columns2[2].style.background == color[activePlayer] &&
             columns3[1].style.background == color[activePlayer] && columns4[0].style.background == color[activePlayer] ){
@@ -98,51 +95,17 @@ function rowCheck(){
         } 
     }
     cross();
-
+    console.log(counter)
     function tie() {
-        if (!(columns1[0].style.background == '#fff') && !(columns2[0].style.background == '#fff') &&
-            !(columns3[0].style.background == '#fff') && !(columns4[0].style.background == '#fff') ){
-                console.log('tie!');
+        if(counter==15){
+                alert("Tie!");
             }
-            
     }
     tie();
 }
-
 function ShowDialog() {
         let dialogs = document.querySelector("#dialog-box");
         let playerTurn = document.querySelector('#playerw').innerText = activePlayer+1;
         playerTurn;
         dialogs.showModal();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
